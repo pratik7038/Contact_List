@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    background-color: #606d91;
+    font-family: sans-serif; 
+    
+}
+
+ul li{
+    position: relative;
+    width:  100%;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+#list{
+    text-align: center;
+    align-content: center;
+}
+
+#form-add{
+    position: relative;
+    text-align: center;
+}
+
+#form-add input{
+    font-size: larger;
+    text-align: center;
+    border: 2px solid black;
+}
+
+#contact-items{
+
+     
+    align-content: center; 
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+
+#page-heading{
+    text-align: center;
+    margin-top: 45 px;
+    color: grey;
+}
+
+#delete-contact{
+
+}

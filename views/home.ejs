@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        <%= title %>
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'><script src="https://kit.fontawesome.com/c130f9f0f8.js" crossorigin="anonymous"></script>z
+    <link rel='stylesheet' type='text/css' media='screen' href='/css/home.css'> 
+</head>
+<body>
+    <h1 id="page-heading">
+        <i class="fa-solid fa-address-book"></i>
+        My Contact List </h1>
+
+    <ul id="list" style="font-size: large ;" >
+        <% for(let i of contact_list) { %> 
+            <li> 
+
+            <div id="contact-items">
+               <p><%= i.name %> </p>
+               
+               <p> <%= i.phone_no %> </p>
+
+               <a href="/delete-contact/?phone=<%= i.phone_no %>&name=<%=i.name%>">
+                <i class="fa-solid fa-trash-can"></i>
+                </a>
+            
+            </div>
+  
+            </li>
+        <% } %>
+    </ul>
+
+    <form id="form-add" action="/create-contact" method="post">
+        <input type="text" name="myname" placeholder="Name">
+        <input type="number" name="myphone" placeholder=" 9850189235" >
+
+        <button type="submit">Add Contact</button>
+
+    </form>
+
+    <!-- <br><br>
+    <h1>Delete the contact</h1> -->
+
+    <!-- <form action="/deleteContact" method="DELETE">
+        <input type="text" name="name" placeholder="name">
+        <button type="submit"">Delete</button>
+         
+    </form> -->
+
+
+
+<script type="text/javascript" src="/js/home.js"></script>
+
+</body>
+</html>
